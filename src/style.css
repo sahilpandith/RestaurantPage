@@ -1,0 +1,67 @@
+body {
+    margin: 0px;
+    height: 100vh;
+}
+#content {
+    height: 100%;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+header {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    background: #ffde73;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+main {
+    flex:1;
+    background : url('./assests/honeyBG2.jpg');
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+footer{
+    background: #ffde73;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+}
+footer ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+footer ul li {
+    flex: 1;
+}
+
+.attribution {
+    color: black;
+    font-size: 12px;
+    text-decoration: none;
+}
+.home-tab,.menu-tab,.contact-tab {
+    border: 1px solid black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.selected-tab {
+    background: #eca43a;
+}
