@@ -179,7 +179,7 @@ main > div {
     clip-path: polygon(24% 0, 72% 0, 100% 32%, 100% 68%, 76% 100%, 23% 100%,0 72%, 0 34%);
 }
 
-/* .menu-name::after{
+.menu-name::after{
     content: '';
     background-image: url(./assests/bee1.png);
     display: inline-block;
@@ -198,7 +198,7 @@ main > div {
     height: 50px;
     background-repeat: no-repeat;
     background-size: cover;
-} */
+}
 
 footer{
     background: var(--khaki);

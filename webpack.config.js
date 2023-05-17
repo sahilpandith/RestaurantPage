@@ -13,11 +13,7 @@ module.exports = {
 		  {
 			test: /\.css$/i,
 			use: ["style-loader", "css-loader"],
-		  },
-		  {
-			test: /\.(ttf|eot|svg|png)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-			loader: 'file-loader'
-		}
+		  }
 		],
 	  },	
 }
