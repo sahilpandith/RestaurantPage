@@ -2,6 +2,13 @@ body {
     margin: 0px;
     height: 100vh;
 }
+:root {
+    --khaki : #ffde73;
+    --orange-1 :#eca43a;
+    --orange-2: #c16a0a;
+    --yellow-1:#ffc60c;
+    --font-600:600;
+}
 #content {
     height: 100%;
 }
@@ -15,7 +22,7 @@ header {
     justify-content: center;
     align-items: center;
     column-gap: 10px;
-    background: #ffde73;
+    background: var(--khaki);
     padding: 10px;
     padding-bottom: 0px;
 }
@@ -29,10 +36,174 @@ main {
     /* align-items: center; */
 }
 
-footer{
-    background: #ffde73;
+main > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--khaki);
+    padding: 30px;
+}
+
+.attribution {
+    color: black;
+    font-size: 12px;
+    text-decoration: none;
+}
+.home-tab,.menu-tab,.contact-tab {
+    border: 1px solid black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: none;
     padding: 10px;
-    font-weight: 600;
+    font-weight: var(--font-600);
+    font-size: 20px;
+}
+
+.selected-tab {
+    background: var(--orange-1);
+}
+.restaurant-name-container {
+    background :var(--orange-2);
+    clip-path: polygon(17% 1%, 81% 0, 100% 23%, 100% 77%, 84% 99%, 16% 100%, 0 80%, 0 27%);
+}
+.restaurant-name {
+    display: flex;
+    align-items: center;
+    border: 8px solid var(--orange-2);
+    padding: 10px;
+    font-size: 30px;
+    font-weight: var(--font-600);
+    background : var(--yellow-1);
+    clip-path: polygon(24% 0, 72% 0, 100% 32%, 100% 68%, 76% 100%, 23% 100%,0 72%, 0 34%);
+}
+
+.restaurant-name::after{
+    content: '';
+    background-image: url(./assests/bee1.png);
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: 50px; 
+    height: 50px;
+    background-size: cover;
+    transform: rotate(90deg);
+}
+
+.restaurant-name::before{
+    content: '';
+    background-image: url(./assests/bee1.png);
+    display: inline-block;
+    width: 50px; 
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.summary{
+    width: 200px;
+    height: auto;
+    border: 8px solid var(--orange-2);
+    padding: 20px;
+    font-size: 14px;
+    margin-top: 40px;
+    border-radius: 30%;
+    background : var(--yellow-1);
+}
+
+.summary p {
+    font-weight: var(--font-600);
+}
+/* .summary:nth-child(2) {
+    font-weight: 14px;
+} */
+
+.summary::before {
+    content: '';
+    background-image: url(./assests/honeycomb.png);
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    position: relative;
+    top: -48px;
+    left: 63px;
+    margin-bottom: -37px;
+}
+
+.timings {
+    width: 200px;
+    height: auto;
+    border: 8px solid var(--orange-2);
+    padding: 20px;
+    font-size: 14px;
+    margin-top: 40px;
+    border-radius: 30%;
+    background : var(--yellow-1);
+}
+
+.day {
+    text-align: center;
+    font-weight: var(--font-600);
+    margin: 3px;
+}
+
+.location {
+    width: 200px;
+    height: auto;
+    border: 8px solid var(--orange-2);
+    padding: 20px;
+    font-size: 14px;
+    margin-top: 40px;
+    border-radius: 30%;
+    background : var(--yellow-1);
+}
+
+.address {
+    text-align: center;
+    font-weight: var(--font-600);
+    margin: 3px;
+}
+
+.menu-name-container {
+    background :var(--orange-2);
+    clip-path: polygon(17% 1%, 81% 0, 100% 23%, 100% 77%, 84% 99%, 16% 100%, 0 80%, 0 27%);
+}
+.menu-name {
+    display: flex;
+    align-items: center;
+    border: 8px solid var(--orange-2);
+    padding: 10px;
+    font-size: 30px;
+    font-weight: var(--font-600);
+    background : var(--yellow-1);
+    clip-path: polygon(24% 0, 72% 0, 100% 32%, 100% 68%, 76% 100%, 23% 100%,0 72%, 0 34%);
+}
+
+/* .menu-name::after{
+    content: '';
+    background-image: url(./assests/bee1.png);
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: 50px; 
+    height: 50px;
+    background-size: cover;
+    transform: rotate(90deg);
+}
+
+.menu-name::before{
+    content: '';
+    background-image: url(./assests/bee1.png);
+    display: inline-block;
+    width: 50px; 
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+footer{
+    background: var(--khaki);
+    padding: 10px;
+    font-weight: var(--font-600);
     font-size: 20px;
 }
 footer ul {
@@ -47,21 +218,3 @@ footer ul li {
     flex: 1;
 }
 
-.attribution {
-    color: black;
-    font-size: 12px;
-    text-decoration: none;
-}
-.home-tab,.menu-tab,.contact-tab {
-    border: 1px solid black;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom: none;
-    padding: 10px;
-    font-weight: 600;
-    font-size: 20px;
-}
-
-.selected-tab {
-    background: #eca43a;
-}

@@ -17,8 +17,11 @@ const menuNode = menuComponent();
 const contactNode = contactComponent();
 
 const main = document.querySelector('main');
-removeAllChildren(main);
-main.append(homeNode);
+if(main){
+    removeAllChildren(main);
+    main.append(homeNode);
+}
+
 
 homeTab.addEventListener('click', function(event){
     if(this.classList.contains('selected-tab'))  return;
