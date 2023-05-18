@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	mode:'development',
@@ -6,14 +7,27 @@ module.exports = {
 	output : {
 		filename : 'main.js',
 		path : path.resolve(__dirname,'dist'),
+		clean: true,
 	},
-	// devtool: "source-map",
 	module: {
 		rules: [
 		  {
 			test: /\.css$/i,
 			use: ["style-loader", "css-loader"],
+		  },
+		  {
+			test: /\.(png|svg|jpg)$/,
+			use: 'file-loader',
 		  }
 		],
-	  },	
+	  },
+	  plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Restaurant',
+			hash: true,
+            filename: 'index.html',
+			template: './src/index.html',
+        }),
+      ],
+      devtool: 'inline-source-map',	
 }

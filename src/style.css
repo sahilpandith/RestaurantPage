@@ -1,6 +1,7 @@
 body {
     margin: 0px;
     height: 100vh;
+    font-family: "Yusei Magic", sans-serif;    
 }
 :root {
     --khaki : #ffde73;
@@ -28,12 +29,11 @@ header {
 }
 main {
     flex:1;
-    background : url('./assests/honeyBG2.jpg');
+    background : url(./assests/honeyBG2.jpg);
     background-size: cover;
     padding: 20px;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
 }
 
 main > div {
@@ -164,42 +164,103 @@ main > div {
     margin: 3px;
 }
 
+
 .menu-name-container {
+    padding: 10px;
     background :var(--orange-2);
-    clip-path: polygon(17% 1%, 81% 0, 100% 23%, 100% 77%, 84% 99%, 16% 100%, 0 80%, 0 27%);
+    clip-path: polygon(22% 1%, 73% 0, 100% 25%, 100% 73%, 76% 99%, 23% 100%, 0 76%, 0 29%);
 }
-.menu-name {
+
+.menu-name-box {
+    width: 400px;
     display: flex;
-    align-items: center;
-    border: 8px solid var(--orange-2);
     padding: 10px;
     font-size: 30px;
-    font-weight: var(--font-600);
+    justify-content: space-between;
     background : var(--yellow-1);
     clip-path: polygon(24% 0, 72% 0, 100% 32%, 100% 68%, 76% 100%, 23% 100%,0 72%, 0 34%);
 }
-
-.menu-name::after{
-    content: '';
-    background-image: url(./assests/bee1.png);
-    display: inline-block;
-    background-repeat: no-repeat;
+.menu-name {
+    padding: 10px;
+    font-size: 30px;
+    font-weight: var(--font-600);
+}
+.bee-image1,.bee-image2 {
     width: 50px; 
     height: 50px;
-    background-size: cover;
-    transform: rotate(90deg);
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
-.menu-name::before{
-    content: '';
-    background-image: url(./assests/bee1.png);
-    display: inline-block;
-    width: 50px; 
-    height: 50px;
-    background-repeat: no-repeat;
-    background-size: cover;
+.bee-image2 {
+    transform: rotateZ(90deg);
 }
 
+.menu-category-container {
+    margin-top: 45px;
+    padding: 10px;
+    background: var(--orange-2);
+    clip-path: polygon(22% 1%, 73% 0, 100% 25%, 100% 73%, 76% 99%, 23% 100%, 0 76%, 0 29%);
+    position: relative;
+}
+
+.menu-label {
+    width: 300px;
+    display: flex;
+    padding: 20px;
+    font-size: 30px;
+    justify-content: center;
+    background: var(--yellow-1);
+    clip-path: polygon(24% 0, 72% 0, 100% 32%, 100% 68%, 76% 100%, 23% 100%,0 72%, 0 34%);
+    margin: 0px;
+}
+
+.brev-honey-comb {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 32px;
+    right: 1px;
+    z-index: 1;
+}
+
+.card {
+ width: 250px;
+ height: 400px;
+ border: 8px solid var(--orange-2);
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ grid-template-rows: repeat(8,1fr);
+ gap: 5px;
+ padding: 5px;
+ border-radius: 17px;
+ margin: 15px;
+    background: var(--yellow-1);
+}
+
+.card-title {
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+.card-summary{
+    grid-column: 1/4;
+    grid-row: 2/5;
+    padding: 5px;
+    padding-left: 20px;
+}
+.card-price {
+    grid-column: 1/2;
+    grid-row: 5/9;
+    font-weight: var(--font-600);
+}
+.card-image {
+    grid-column: 2/4;
+    grid-row: 5/9;
+    height: 165px;
+    width: 150px;
+    border: 1px solid var(--orange-2);
+    border-radius: 17px;
+}
 footer{
     background: var(--khaki);
     padding: 10px;
