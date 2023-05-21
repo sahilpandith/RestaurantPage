@@ -29,7 +29,7 @@ header {
 }
 main {
     flex:1;
-    background : url(./assests/honeyBG2.jpg);
+    background : url('./assests/honeyBG2.jpg');
     background-size: cover;
     padding: 20px;
     display: flex;
@@ -261,6 +261,75 @@ main > div {
     border: 1px solid var(--orange-2);
     border-radius: 17px;
 }
+
+.contact-name-container {
+    background :var(--orange-2);
+    clip-path: polygon(17% 1%, 81% 0, 100% 23%, 100% 77%, 84% 99%, 16% 100%, 0 80%, 0 27%);
+}
+.contact-name {
+    display: flex;
+    align-items: center;
+    border: 8px solid var(--orange-2);
+    padding: 10px;
+    font-size: 30px;
+    font-weight: var(--font-600);
+    background : var(--yellow-1);
+    clip-path: polygon(24% 0, 72% 0, 100% 32%, 100% 68%, 76% 100%, 23% 100%,0 72%, 0 34%);
+}
+
+.contact-name::after{
+    content: '';
+    background-image: url(./assests/bee1.png);
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: 50px; 
+    height: 50px;
+    background-size: cover;
+    transform: rotate(90deg);
+}
+
+.contact-name::before{
+    content: '';
+    background-image: url(./assests/bee1.png);
+    display: inline-block;
+    width: 50px; 
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contact-card-container{
+    border: 8px solid var(--orange-2);
+    margin-top: 40px;
+    clip-path: polygon(5% 0, 95% 0%, 100% 15%, 100% 92%, 90% 102%, 6% 100%, 0 89%, 0 15%);
+    background: var(--yellow-1);
+    font-size: 17px;
+    font-weight: 600;
+}
+.contact-class {
+    padding: 10px;
+    border: 8px solid var(--orange-2);
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 2fr 1fr;
+    gap: 2px;
+}
+
+.contact-class div:nth-child(1){
+    grid-column: 1/3;
+}
+.contact-class div:nth-child(2){
+    grid-column: 2/3;
+}
+
+.contact-class div:nth-child(3){
+    grid-column: 2/3;
+}
+
+.contact-class div:nth-child(4){
+    grid-column: 2/3;
+}
+
+
 footer{
     background: var(--khaki);
     padding: 10px;

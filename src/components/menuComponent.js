@@ -2,6 +2,7 @@ import  beeImg from '../assests/bee1.png';
 import honeCombImg from '../assests/honeycomb.png';
 import honeyTeaImg from '../assests/honeyTea.jpg';
 import berryTeaImg from '../assests/berryTea.jpg';
+import { CreateCard,CreateImageNode} from '../utilities/utilities.js'
 
 function menuComponent(){
     const menuCompNode = document.createElement('div');
@@ -16,16 +17,7 @@ function menuComponent(){
     return menuCompNode;
   }
 
-  class CreateImageNode {
-    node = document.createElement('img');
-    constructor(src,classname){
-      this.node.src =src;
-      this.node.classList.add(classname);
-    }
-    get imageNode(){
-      return this.node;
-    }
-  }
+ 
   function getMenuHeaderElement(){
     const menuHeaderContainer = document.createElement('div');
     menuHeaderContainer.classList.add('menu-name-container');
@@ -47,46 +39,8 @@ function menuComponent(){
     menuHeaderContainer.append(menuNameBox);
     return menuHeaderContainer;
 }
-class CreateMenuCategory {
-   beverageContainer = document.createElement('div');
-   beverage = document.createElement('h3');
-   img = new CreateImageNode(honeCombImg,'brev-honey-comb');
-   constructor(label){
-    this.beverageContainer.classList.add('menu-category-container');
-    this.beverage.classList.add('menu-label');
-    this.beverage.textContent = label;
-    this.beverageContainer.append(this.beverage);
-    this.beverageContainer.append(this.img.imageNode);
-   }
-   get menuCategoryNode (){
-     return this.beverageContainer;
-   }
-}
 
-class CreateCard {
-  card = document.createElement('div');
-  cardTitle = document.createElement('h3');
-  summary = document.createElement('p');
-  price = document.createElement('div');
-  img;
-  constructor(title,summary,price,img){
-    this.cardTitle.textContent = title,
-    this.summary.textContent = summary;
-    this.price.textContent = price;
-    this.img = new CreateImageNode(img,'card-image')
-    this.card.classList.add('card');
-    this.cardTitle.classList.add('card-title');
-    this.summary.classList.add('card-summary');
-    this.price.classList.add('card-price');
-    this.card.append(this.cardTitle);
-    this.card.append(this.summary);
-    this.card.append(this.price);
-    this.card.append(this.img.imageNode);
-  }
-  get node (){
-    return this.card;
-  }
-}
+
 
 function createBeveragesSection(parentNode){
   const beverageCategory = new CreateMenuCategory('Beverages');
@@ -132,5 +86,21 @@ function createMainDishesSection(parentNode){
   const theBearyBestPorridgeEle = new CreateCard('The Beary Best Porridge','Made by Baby Bear himself, this porridge is guarenteed to be just right, or your money back.','150 Rs',berryTeaImg);
   parentNode.append(theBearyBestPorridgeEle.node);
   
+}
+
+class CreateMenuCategory {
+  beverageContainer = document.createElement('div');
+  beverage = document.createElement('h3');
+  img = new CreateImageNode(honeCombImg,'brev-honey-comb');
+  constructor(label){
+   this.beverageContainer.classList.add('menu-category-container');
+   this.beverage.classList.add('menu-label');
+   this.beverage.textContent = label;
+   this.beverageContainer.append(this.beverage);
+   this.beverageContainer.append(this.img.imageNode);
+  }
+  get menuCategoryNode (){
+    return this.beverageContainer;
+  }
 }
   export default menuComponent
