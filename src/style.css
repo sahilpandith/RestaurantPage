@@ -30,7 +30,7 @@ header {
 main {
     flex:1;
     background : url('./assests/honeyBG2.jpg');
-    background-size: cover;
+    background-size: contain;
     padding: 20px;
     display: flex;
     justify-content: center;
