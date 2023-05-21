@@ -2,6 +2,9 @@ import  beeImg from '../assests/bee1.png';
 import honeCombImg from '../assests/honeycomb.png';
 import honeyTeaImg from '../assests/honeyTea.jpg';
 import berryTeaImg from '../assests/berryTea.jpg';
+import toastImg from '../assests/toast.jpg';
+import panCakeImg from '../assests/pancakes.jpg';
+import fruitsImg from '../assests/fresh-fruits.jpg';
 import { CreateCard,CreateImageNode} from '../utilities/utilities.js'
 
 function menuComponent(){
@@ -57,10 +60,10 @@ function createSidesSection(parentNode){
   const sidesCategory = new CreateMenuCategory('Sides');
   parentNode.append(sidesCategory.menuCategoryNode);
 
-  const honeyTeaEle = new CreateCard('Toast And jam','A slice of toast, your choice of bread, and our homemade blackberry or raspberry jam.','60 Rs',honeyTeaImg);
+  const honeyTeaEle = new CreateCard('Toast And jam','A slice of toast, your choice of bread, and our homemade blackberry or raspberry jam.','60 Rs',toastImg);
   parentNode.append(honeyTeaEle.node);
 
-  const berryTeaEle = new CreateCard('Fresh Fruits','A small bowl of fresh fruit, whatever we find at the market for the day.','50 Rs',berryTeaImg);
+  const berryTeaEle = new CreateCard('Fresh Fruits','A small bowl of fresh fruit, whatever we find at the market for the day.','50 Rs',fruitsImg);
   parentNode.append(berryTeaEle.node);
 }
 
@@ -68,13 +71,13 @@ function createMainDishesSection(parentNode){
   const mainDishesCategory = new CreateMenuCategory('Main Dishes');
   parentNode.append(mainDishesCategory.menuCategoryNode);
 
-  const panCakesEle = new CreateCard('Pan Cakes','A stack of homemade buttermilk pancakes, served with our locally sourced maple syrup.','160 Rs',honeyTeaImg);
+  const panCakesEle = new CreateCard('Pan Cakes','A stack of homemade buttermilk pancakes, served with our locally sourced maple syrup.','160 Rs',panCakeImg);
   parentNode.append(panCakesEle.node);
 
-  const frenchToastEle = new CreateCard('French Toast','Two slices of the best french toast you will ever eat, served with our locally sourced maple syrup.','150 Rs',berryTeaImg);
+  const frenchToastEle = new CreateCard('French Toast','Two slices of the best french toast you will ever eat, served with our locally sourced maple syrup.','150 Rs',toastImg);
   parentNode.append(frenchToastEle.node);
 
-  const bearyVeggieSandwichEle = new CreateCard('Beary Veggie Sandwich','Do you like vegetables? Then this is the sandwich for you! Stuffed full of a variety of fresh produce, it will fill you up.','260 Rs',honeyTeaImg);
+  const bearyVeggieSandwichEle = new CreateCard('Beary Veggie Sandwich','Do you like vegetables? Then this is the sandwich for you! Stuffed full of a variety of fresh produce, it will fill you up.','260 Rs',toastImg);
   parentNode.append(bearyVeggieSandwichEle.node);
 
   const bagelAndLox = new CreateCard('Bagel and Lox','Our house specialty, you cant go wrong with a hearty bagel topped with sustainably harvested salmon.','250 Rs',berryTeaImg);
